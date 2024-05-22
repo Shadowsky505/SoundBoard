@@ -10,6 +10,8 @@ class SoundViewController: UIViewController {
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var agregarButton: UIButton!
     @IBOutlet weak var labelTimer: UILabel!
+    @IBOutlet weak var volumeSlider: UISlider!
+    
     
     var grabarAudio: AVAudioRecorder?
     var reproducirAudio: AVAudioPlayer?
@@ -17,6 +19,9 @@ class SoundViewController: UIViewController {
     
     var timer: Timer?
     var elapsedTime: TimeInterval = 0
+    
+    var startTime: Date?
+    var endTime: Date?
     
     // MARK: ACTION FUNCTIONS
     
@@ -54,12 +59,13 @@ class SoundViewController: UIViewController {
     @IBAction func reproducirTapped(_ sender: Any) {
         do {
             try reproducirAudio = AVAudioPlayer(contentsOf: audioURL!)
+            reproducirAudio!.volume = volumeSlider.value
             reproducirAudio!.play()
             print("REPRODUCIENDO!!")
             reproducirButton.isEnabled = true
             agregarButton.isEnabled = true
         } catch {
-            // Manejo de errores
+            
         }
     }
     
@@ -81,6 +87,7 @@ class SoundViewController: UIViewController {
         reproducirButton.isEnabled = false
         agregarButton.isEnabled = false
         labelTimer?.text = "00:00"
+        volumeSlider.value = 1.0
     }
     
     func configurarGrabacion() {

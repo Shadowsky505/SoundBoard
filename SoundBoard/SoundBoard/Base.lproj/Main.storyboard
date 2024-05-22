@@ -126,14 +126,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GJM-JA-6DG">
+                                <rect key="frame" x="28" y="588" width="358" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6MS-PK-PQY"/>
+                                </constraints>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yOy-9I-wG8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="GJM-JA-6DG" firstAttribute="leading" secondItem="yOy-9I-wG8" secondAttribute="leading" constant="30" id="3Fn-FA-AHh"/>
                             <constraint firstItem="1RM-Q4-upu" firstAttribute="top" secondItem="Rzn-I7-cjW" secondAttribute="bottom" constant="39.5" id="AkH-A5-Gz4"/>
                             <constraint firstItem="yOy-9I-wG8" firstAttribute="trailing" secondItem="Iie-bf-0EB" secondAttribute="trailing" constant="20" id="DpK-EU-ntz"/>
                             <constraint firstItem="NuS-MA-p7R" firstAttribute="centerX" secondItem="HMQ-wN-fkd" secondAttribute="centerX" id="EYd-OC-qKS"/>
+                            <constraint firstItem="yOy-9I-wG8" firstAttribute="trailing" secondItem="GJM-JA-6DG" secondAttribute="trailing" constant="30" id="Ebf-QT-ml3"/>
                             <constraint firstItem="Iie-bf-0EB" firstAttribute="top" secondItem="c9Z-xk-YNm" secondAttribute="bottom" constant="20" id="FJK-0r-qAm"/>
+                            <constraint firstItem="GJM-JA-6DG" firstAttribute="centerX" secondItem="HMQ-wN-fkd" secondAttribute="centerX" id="K6C-pM-oYn"/>
                             <constraint firstItem="c9Z-xk-YNm" firstAttribute="leading" secondItem="yOy-9I-wG8" secondAttribute="leading" constant="20" id="NA4-vJ-PBE"/>
                             <constraint firstItem="Rzn-I7-cjW" firstAttribute="top" secondItem="Iie-bf-0EB" secondAttribute="bottom" constant="20" id="OB8-fb-9L0"/>
                             <constraint firstItem="c9Z-xk-YNm" firstAttribute="centerX" secondItem="HMQ-wN-fkd" secondAttribute="centerX" id="R7b-xq-SIS"/>
@@ -147,6 +156,7 @@
                             <constraint firstItem="c9Z-xk-YNm" firstAttribute="top" secondItem="NuS-MA-p7R" secondAttribute="bottom" constant="30" id="lbE-4R-B1W"/>
                             <constraint firstItem="1RM-Q4-upu" firstAttribute="leading" secondItem="yOy-9I-wG8" secondAttribute="leading" id="m2f-7b-BhQ"/>
                             <constraint firstItem="NuS-MA-p7R" firstAttribute="top" secondItem="Kll-db-ewv" secondAttribute="bottom" constant="20" id="odD-Ud-PyG"/>
+                            <constraint firstItem="GJM-JA-6DG" firstAttribute="top" secondItem="1RM-Q4-upu" secondAttribute="bottom" constant="82" id="vIA-n1-KMG"/>
                             <constraint firstItem="1RM-Q4-upu" firstAttribute="centerX" secondItem="HMQ-wN-fkd" secondAttribute="centerX" id="ysG-nK-uNk"/>
                         </constraints>
                     </view>
@@ -157,11 +167,12 @@
                         <outlet property="labelTimer" destination="1RM-Q4-upu" id="yrz-LB-P5c"/>
                         <outlet property="nombreTextField" destination="Iie-bf-0EB" id="bkk-oh-JsT"/>
                         <outlet property="reproducirButton" destination="NuS-MA-p7R" id="kM6-rp-mTu"/>
+                        <outlet property="volumeSlider" destination="GJM-JA-6DG" id="Bge-Zb-U9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8M-SN-J8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="98"/>
+            <point key="canvasLocation" x="1721.7391304347827" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZhD-6k-6Tf">
